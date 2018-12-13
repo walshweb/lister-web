@@ -1,0 +1,83 @@
+// Navigation CSS Here
+.listnav {
+  position: absolute;
+  display: flex;
+  flex-flow: row-reverse;
+  transform-origin: top left;
+  left: 5vh;
+  transform: translate(-100%) rotate(-90deg);
+  margin-top: 8vh;
+  width: 5vh;
+  .list {
+    display: block;
+    float: left;
+    background-color:@teal;
+    color:#fff;
+    padding: 2px 12px 2px 12px;
+    font-weight:500;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    white-space: nowrap;
+    margin-left: 4px;
+  }
+  .list.active {
+    background-color:@green;
+  }
+}
+.plusbtn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0px;
+  right:0px;
+  width:50px;
+  height:50px;
+  color:#fff;
+  z-index: 9;
+  cursor:pointer;
+  background-color:@theme-secondary;
+  .fas {
+    transition: linear .2s all;
+  }
+}
+.plusbtn.x {
+  .fas {
+    transform: rotate(-45deg);
+  }
+}
+
+.menubtn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom:0px;
+  right:0px;
+  width:50px;
+  height:50px;
+  color:#fff;
+  z-index: 1;
+  cursor:pointer;
+  background-color:@theme-secondary;
+}
+.main-menu {
+  ul {
+    li {
+      color:#fff;
+      font-weight:700;
+      ul {
+        height:0px;
+        overflow:hidden;
+        .transition;
+      }
+      ul.active {
+        -webkit-animation-name: expanddown;
+        -webkit-animation-duration: .1s;
+        animation-name: expanddown;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
